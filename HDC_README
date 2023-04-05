@@ -1,0 +1,17 @@
+HDC.ipynb
+This is a Jupyter notebook that demonstrates how to use the Hierarchical Density-based Clustering (HDC) algorithm to cluster data. The algorithm is implemented using Python.
+
+Dependencies
+The following Python packages are required to run this notebook:
+numpy
+matplotlib
+sklearn
+
+Installation
+To install the required packages, you can use pip:
+pip install numpy matplotlib sklearn
+
+
+Usage
+To use the HDC algorithm, simply open the HDC.ipynb notebook in a Jupyter notebook environment and run the cells in order.
+The notebook demonstrates how to use the HDC algorithm to cluster a synthetic dataset, and includes visualizations of the resulting clusters.
