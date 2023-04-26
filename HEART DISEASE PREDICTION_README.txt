@@ -1,33 +1,31 @@
-Introduction:
+Heart Disease Prediction
 
-This project aims to predict whether a patient should be diagnosed with heart disease or not based on various features such as age, sex, chest pain type, blood pressure, cholesterol level, etc. The dataset used in this project contains 303 instances of patients with 14 attributes.
-
-Libraries used:
-
-Pandas: for data manipulation and analysis
-NumPy: for numerical operations
-Matplotlib: for data visualization
-Seaborn: for statistical data visualization
-Scikit-learn: for machine learning models and preprocessing
-Data exploration:
-
-Loaded the dataset using pandas and explored the first few rows, summary statistics and data types.
-Checked for missing values and found none.
-Visualized the target variable distribution and pair plots of various features.
-Data preprocessing:
-
-Split the data into features and target variables.
-Split the data into training and testing sets with a test size of 20% and a random state of 42.
-Scaled the data using StandardScaler.
-Model training and evaluation:
-
-Trained the data on various classification models such as Logistic Regression, Decision Tree, and Random Forest.
-Evaluated the accuracy of each model on the test set.
-Plotted a bar graph of the accuracies of each model.
-Conclusion:
-
-The Random Forest classifier performed the best with an accuracy of 88%.
-The model can be used to predict whether a patient has heart disease or not based on their vitals and symptoms.
+This code predicts whether a person has heart disease based on various medical and lifestyle factors. It uses various classification models to predict the target variable, which is whether or not a person has heart disease.
 
 
+Dataset
 
+The dataset used in this code is heartDisease.csv. It contains data on 303 patients and 14 features including age, sex, chest pain type, resting blood pressure, serum cholesterol, fasting blood sugar, resting electrocardiographic results, maximum heart rate achieved, exercise-induced angina, ST depression induced by exercise, slope of the peak exercise ST segment, number of major vessels colored by fluoroscopy, thal, and target. The target variable is binary, with 1 indicating the presence of heart disease and 0 indicating the absence of heart disease.
+
+
+Workflow
+
+Import necessary libraries
+
+
+Load the dataset
+
+Explore the dataset using head(), describe(), and info() methods to get an idea of the data
+Check for missing values using the isnull() and sum() methods
+Visualize the data using countplot() and pairplot() methods from seaborn library
+Split the data into features and target
+Split the data into training and testing sets using train_test_split() method from sklearn library
+Scale the data using StandardScaler() method from sklearn library
+Fit the data to various classification models including LogisticRegression(), KNeighborsClassifier(), SVC(), GaussianNB(), DecisionTreeClassifier(), RandomForestClassifier(), and xgb.XGBClassifier()
+Calculate the accuracy of each model on the test set using score() method from sklearn library
+Visualize the accuracy results using bar() method from matplotlib library
+
+
+Conclusion
+
+The model with the highest accuracy is chosen as the best model to predict whether a person has heart disease or not. This code can be used to predict the likelihood of a patient having heart disease and can be used in clinical settings to help healthcare professionals make more informed decisions.
