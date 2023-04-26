@@ -1,0 +1,43 @@
+Ridge Regression with Feature Selection and Parameter Tuning
+
+This script loads a dataset of housing prices and uses Ridge regression to predict house prices. It performs feature selection using Lasso regression and parameter tuning using GridSearchCV.
+
+
+Prerequisites
+
+pandas
+numpy
+seaborn
+scikit-learn
+
+
+Dataset
+
+The dataset used in this script is the kc_house_data.csv file which contains information about housing prices in King County, USA.
+
+
+Usage
+
+Ensure that the dataset is located in the same directory as the script.
+Run the script.
+
+
+Procedure
+
+Load the dataset using pandas.
+Define the features and target variable.
+Check for missing values and outliers.
+Split the dataset into training and test sets.
+Scale the data using StandardScaler.
+Perform feature selection using Lasso regression.
+Perform parameter tuning using GridSearchCV with 5-fold cross-validation.
+Fit the Ridge regression model with the best parameters.
+Evaluate performance on the test set using mean squared error and R2 score.
+Create a dataframe to store the accuracy of the models.
+Sort the models by accuracy in descending order and set the index to Model No.
+Print the table.
+
+
+Outputs
+
+The script outputs a table with the accuracy of the Ridge regression model. The accuracy is measured using R2 score and is shown as a percentage.
