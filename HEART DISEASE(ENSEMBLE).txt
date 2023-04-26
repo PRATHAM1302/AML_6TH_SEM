@@ -1,0 +1,56 @@
+README FILE: Ensemble Models for Heart Disease Prediction
+
+
+Overview
+
+This code loads the Heart Disease dataset and uses ensemble methods to predict the target variable. The program creates three ensemble models: Random Forest Classifier, Gradient Boosting Classifier, and AdaBoost Classifier. It then fits each model to the training data, predicts the target variable for the testing data, and calculates the accuracy score for each model. Finally, the program plots the accuracy scores for the models using Seaborn.
+
+
+Prerequisites
+
+This program requires the following libraries:
+
+pandas
+numpy
+matplotlib
+seaborn
+sklearn
+
+
+Dataset
+
+This program uses the Heart Disease dataset, which is stored in a CSV file named "heartDisease.csv". This dataset contains 303 rows and 14 columns, including the target variable "target".
+
+
+Instructions
+
+Install the required libraries.
+Download the "heartDisease.csv" file and save it in the same directory as the program file.
+Run the program.
+
+
+Code Explanation
+
+The necessary libraries are imported.
+The Heart Disease dataset is loaded using pandas.
+The data is split into features (X) and target (y).
+The data is split into training and testing sets using sklearn's train_test_split.
+The data is scaled using sklearn's StandardScaler.
+Three ensemble models are imported from sklearn: RandomForestClassifier, GradientBoostingClassifier, and AdaBoostClassifier.
+The ensemble models are created and fitted to the training data.
+The target variable is predicted for the testing data using each model.
+The accuracy score is calculated for each model using sklearn's accuracy_score.
+The accuracy scores are printed for each model.
+The accuracy scores are plotted using Seaborn.
+
+
+Output
+
+The program prints the accuracy score for each ensemble model in percentage. The accuracy scores are also plotted using Seaborn.
+
+
+Example Output
+
+Random Forest Classifier Accuracy: 85.25%
+Gradient Boosting Classifier Accuracy: 85.25%
+AdaBoost Classifier Accuracy: 82.79%
