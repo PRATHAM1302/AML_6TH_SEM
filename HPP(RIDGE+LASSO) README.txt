@@ -1,33 +1,46 @@
-Predicting House Prices using Ridge and Lasso Regression
-
-This notebook explores the task of predicting house prices in King County, Washington State, USA, using Ridge and Lasso Regression. The dataset used in this notebook consists of historic data of houses sold between May 2014 to May 2015, and was obtained from Kaggle. The aim of this notebook is to build a regression model that can predict the sales of houses in King County with an accuracy of at least 75-80%, and to understand which factors are responsible for higher property value - $650K and above.
+Regression Analysis of King County Housing Data
 
 
-Files
+Introduction
 
-kc_house_data.csv: The dataset used in this notebook.
-
-
-Dependencies
-
-This notebook requires the following Python packages:
-pandas
-numpy
-matplotlib
-seaborn
-sklearn
+This code uses Ridge and Lasso regression models to analyze King County Housing data. The data set contains information about houses sold in King County, WA between May 2014 and May 2015.
 
 
-Contents
+Libraries
 
-The notebook consists of the following sections:
+This code uses the following libraries:
 
-Data Preparation: This section imports the dataset and performs exploratory data analysis, including data cleaning, feature engineering, and visualizations.
+pandas: For data manipulation and analysis.
+numpy: For scientific computing in Python.
+seaborn: For data visualization.
+sklearn: For machine learning modeling and evaluation.
 
-Modeling: This section builds Ridge and Lasso regression models using the cleaned and engineered data, and evaluates their performance on a test dataset.
 
-Model Interpretation: This section examines the coefficients of the Ridge and Lasso regression models to identify which features are most important for predicting house prices.
+Loading the Data
+
+The King County Housing dataset is loaded using pandas. It is stored in a pandas DataFrame called df.
+
+
+Preprocessing the Data
+
+The features and target variable are defined. The date feature is dropped, as it is not useful for analysis. Missing values are checked for and no missing values are found. Outliers are checked for using a boxplot. Categorical variables are checked for using the dtypes attribute.
+
+
+Splitting and Scaling the Data
+
+The data is split into training and test sets using train_test_split. The data is scaled using the StandardScaler from the sklearn library.
+
+
+Building the Models
+
+Both Ridge and Lasso regression models are fit using the training data.
+
+
+Evaluating Model Performance
+
+The performance of both models is evaluated using the test set. The mean squared error and R-squared score are calculated for each model. The R-squared score is multiplied by 100 to obtain the accuracy of the models. The results are stored in a pandas DataFrame.
+
 
 Results
 
-The final Ridge regression model achieved an accuracy of 78%, while the final Lasso regression model achieved an accuracy of 77%. Both models identified several important features for predicting house prices, including square footage, number of bedrooms and bathrooms, and location.
+The results are sorted by accuracy in descending order and displayed in a table. The table includes the model name, accuracy score, and model number.
